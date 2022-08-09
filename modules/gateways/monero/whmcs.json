@@ -3,7 +3,7 @@
   "type": "whmcs-gateways",
   "name": "monerowhmcs",
   "license": "MIT",
-  "category": "gateway",
+  "category": "payments",
   "description": {
     "name": "MoneroWHMCS",
     "tagline": "A WHMCS Payment Gateway for accepting Monero.",
