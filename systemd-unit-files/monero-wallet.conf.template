@@ -5,5 +5,4 @@ rpc-login=user:password
 wallet-file=/opt/monero-wallets/WALLET_FILE_NAME
 password-file=/opt/monero-wallets/WALLET_FILE_NAME.password
 non-interactive=true
-log-file=/home/whattheserver.com/.config/monero-wallets/monero-wallet-WTS.log
 log-level=2
