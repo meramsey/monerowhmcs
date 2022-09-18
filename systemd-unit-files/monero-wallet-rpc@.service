@@ -1,0 +1,25 @@
+# User service for running monero-wallet-rpc
+#
+# Place in ~/.config/systemd/user/monero-wallet-rpc@.service
+# File must include the '@' (ex monero-wallet-rpc@.service)
+# As your normal user, run 
+#   systemctl --user daemon-reload
+# You can now start/enable monero-wallet-rpc remote by using monero-wallet-rpc@<walletfilename>
+#   systemctl --user enable monero-wallet-rpc@WHMCS
+#   systemctl --user start monero-wallet-rpc@WHMCS
+
+[Unit]
+Description=monero-wallet-rpc: Monero Wallet RPC config %i
+After=network-online.target
+Wants=network-online.target 
+AssertPathIsDirectory=%h/.config/monero-wallets/
+
+[Service]
+WorkingDirectory=%h/.config/monero-wallets/
+Type=simple
+ExecStart=/opt/monero-bin/monero-wallet-rpc \
+--config=%h/.config/monero-wallets/monero-wallet-%i.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
