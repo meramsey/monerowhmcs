@@ -1,0 +1,6 @@
+daemon-address=node.moneroworld.com:18089
+rpc-bind-ip=127.0.0.1
+rpc-bind-port=18082
+rpc-login=user:password
+wallet-file=/opt/monero-wallets/WALLET_FILE_NAME
+password-file=/opt/monero-wallets/WALLET_FILE_NAME.password
