@@ -1,0 +1,14 @@
+[Unit]
+Description=Monero Wallet RPC
+After=network.target monerod.service
+
+[Service]
+User=moneroservices
+Group=moneroservices
+WorkingDirectory=/opt/monero-wallets
+Type=simple
+ExecStart=/opt/monero-bin/monero-wallet-rpc --wallet-file /opt/monero-wallets/WHMCS --rpc-bind-port 18082 --password-file /opt/monero-wallets/WHMCS.password --disable-rpc-login --daemon-address node.moneroworld.com:18089 --log-file /var/log/monero-wallet.log
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
