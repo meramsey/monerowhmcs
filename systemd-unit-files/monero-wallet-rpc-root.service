@@ -7,7 +7,9 @@ User=root
 Group=root
 WorkingDirectory=/opt/monero-wallets
 Type=simple
-ExecStart=/opt/monero-bin/monero-wallet-rpc --config-file /opt/monero-wallets/monero-wallet.conf --log-file /var/log/monero-wallet.log
+ExecStart=/opt/monero-bin/monero-wallet-rpc \
+--config-file /opt/monero-wallets/monero-wallet.conf \
+--log-file /var/log/monero-wallet.log
 Restart=always
 
 [Install]
